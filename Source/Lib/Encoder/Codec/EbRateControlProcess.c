@@ -5503,6 +5503,7 @@ static void sb_setup_lambda(PictureControlSet *pcs_ptr,
             base_block_count += 1.0;
         }
     }
+    assert(base_block_count > 0);
     const int orig_rdmult = pcs_ptr->hbd_mode_decision ?
         av1lambda_mode_decision10_bit_sse[ppcs_ptr->frm_hdr.quantization_params.base_q_idx]:
         av1_lambda_mode_decision8_bit_sse[ppcs_ptr->frm_hdr.quantization_params.base_q_idx];
